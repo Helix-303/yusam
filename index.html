@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#170b12" />
+<title>Yuşa'ya, sevgiyle ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+:root{--bg:#170b12;--wine:#6d263e;--rose:#e6a0b4;--cream:#f8e9e7;--muted:#c7aeb5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% 0%,#482033 0%,#24111c 38%,var(--bg) 78%);color:var(--cream);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
+#hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}.heart{position:absolute;bottom:-40px;color:#e89ab1;opacity:0;animation:floatUp linear forwards;text-shadow:0 0 18px #d65b83}.heart:before{content:'♥'}@keyframes floatUp{0%{transform:translateY(0) rotate(0) scale(.7);opacity:0}12%{opacity:.55}85%{opacity:.3}100%{transform:translateY(-110vh) rotate(35deg) scale(1.3);opacity:0}}
+main{position:relative;z-index:1}.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 22px}.hero-inner{max-width:720px;animation:appear 1.5s ease both}.eyebrow{font-size:10px;letter-spacing:.36em;text-transform:uppercase;color:#d69bad}.ornament{font-family:'Playfair Display',serif;color:var(--rose);font-size:42px;margin:28px 0 12px;animation:pulse 3s ease-in-out infinite}@keyframes pulse{50%{transform:scale(1.12);text-shadow:0 0 30px #e6a0b4}}
+h1{font:400 clamp(54px,12vw,100px)/1.05 'Playfair Display',serif;margin:0;color:#fff0ed;letter-spacing:-.04em}h1 em{color:var(--rose);font-weight:400}.subtitle{color:var(--muted);font:italic 18px 'Playfair Display',serif;margin:22px 0 36px}.open-btn{border:1px solid #b86b83;color:#f8dce4;background:#6d263e44;padding:14px 25px;border-radius:99px;font:400 11px 'DM Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:.3s}.open-btn:hover{background:#8b3b58;transform:translateY(-2px);box-shadow:0 8px 35px #a33c6040}.scroll{display:block;margin-top:60px;color:#98727f;font-size:10px;letter-spacing:.25em;text-transform:uppercase}
+.content{max-width:760px;margin:auto;padding:30px 25px 110px;opacity:0;transform:translateY(25px);transition:opacity 1s,transform 1s;display:none}.content.show{display:block;opacity:1;transform:translateY(0)}.divider{display:flex;align-items:center;gap:18px;color:#c27b91;justify-content:center;margin:15px 0 55px}.divider:before,.divider:after{content:'';height:1px;flex:1;background:linear-gradient(90deg,transparent,#8b4b61)}.divider:after{transform:scaleX(-1)}.letter{text-align:center;padding:34px 24px 22px;border:1px solid #74405466;border-radius:24px;background:linear-gradient(145deg,#6d263e18,#170b1222);box-shadow:0 18px 60px #09050a55, inset 0 0 35px #b64e6a0b;position:relative}.letter:before,.letter:after{content:'♡';position:absolute;color:#d58aa1;font:24px 'Playfair Display',serif;opacity:.8}.letter:before{top:12px;left:17px}.letter:after{bottom:8px;right:17px}.section-label{font-size:10px;letter-spacing:.32em;color:#c77e94;text-transform:uppercase}.letter h2,.poem h2{font:400 clamp(32px,7vw,49px)/1.2 'Playfair Display',serif;margin:17px 0 28px}.letter p{font:400 17px/2 'Playfair Display',serif;color:#e4cfd3;max-width:610px;margin:0 auto 17px}.letter .highlight{color:#f1b4c5;font-style:italic}.timer-section{margin:78px auto 0;text-align:center;padding:42px 22px 38px;border:1px solid #8b4b615c;border-radius:26px;background:radial-gradient(ellipse at 50% 0%,#8b3b5828,transparent 70%),linear-gradient(145deg,#6d263e18,#170b1222);box-shadow:0 16px 55px #09050a55;position:relative;overflow:hidden}.timer-section:before,.timer-section:after{content:'♡';position:absolute;color:#e6a0b4;opacity:.12;font:80px 'Playfair Display',serif}.timer-section:before{left:12px;top:8px;transform:rotate(-18deg)}.timer-section:after{right:14px;bottom:0;transform:rotate(15deg)}.timer-title{font:400 clamp(29px,6vw,43px)/1.2 'Playfair Display',serif;margin:14px 0 10px;color:#fff0ed}.timer-subtitle{font:italic 15px 'Playfair Display',serif;color:#c7aeb5;margin:0 0 28px}.timer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:570px;margin:0 auto}.time-unit{padding:17px 7px 14px;border:1px solid #a65b7455;border-radius:15px;background:linear-gradient(145deg,#6d263e35,#170b1233);box-shadow:inset 0 0 22px #e6a0b40a}.time-number{display:block;font:500 clamp(27px,6vw,40px)/1.1 'Playfair Display',serif;color:#f4c4d1;font-variant-numeric:tabular-nums;text-shadow:0 0 18px #d65b8344}.time-label{display:block;margin-top:8px;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#c7aeb5}.timer-total{margin:20px 0 0;color:#d9a6b6;font-size:11px;letter-spacing:.12em}.little-world{max-width:590px;margin:28px auto 0;padding:20px 18px 17px;border-top:1px solid #8b4b614d;background:#170b122b;border-radius:16px}.little-world .world-heading{font:italic 18px 'Playfair Display',serif;color:#f0cbd5;margin-bottom:13px}.world-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.world-stat{padding:13px 8px;border-radius:12px;background:#6d263e20;border:1px solid #8b4b6138}.world-stat strong{display:block;color:#f1b4c5;font:500 21px 'Playfair Display',serif;font-variant-numeric:tabular-nums}.world-stat span{display:block;color:#c7aeb5;font-size:10px;line-height:1.5;margin-top:5px}.world-stat strong{font-size:clamp(17px,3.8vw,22px);overflow-wrap:anywhere}.world-stat{min-height:88px;display:flex;flex-direction:column;justify-content:center}.timer-heart{color:#d98da5;font-size:18px;margin-bottom:5px}@media(max-width:390px){.timer-grid{gap:7px}.time-unit{padding:14px 4px 12px}.time-label{font-size:8px;letter-spacing:.12em}.world-stats{grid-template-columns:1fr 1fr}}
+.poem{margin:80px auto 0;text-align:center;padding:48px 22px;border:1px solid #8b4b615c;border-radius:26px;background:radial-gradient(ellipse at 50% 0%,#8b3b5828,transparent 68%),linear-gradient(135deg,#5a23351c,#b64e6a0c);box-shadow:0 16px 55px #09050a55;position:relative;overflow:hidden}.poem:before{content:'♥';position:absolute;right:18px;top:10px;color:#d889a1;opacity:.12;font-size:75px;transform:rotate(18deg)}.poem-lines{font:italic 19px/2.05 'Playfair Display',serif;color:#f0dadd;white-space:pre-line}.poem .poem-heart{font-size:24px;color:#df91a9;margin-bottom:22px}.closing{text-align:center;padding:85px 10px 20px;position:relative}.closing:before{content:'♡  ·  ♡  ·  ♡';display:block;color:#b66c83;letter-spacing:.65em;font-size:13px;margin-bottom:30px;opacity:.8}.closing .big-heart{font-size:48px;color:#e69ab0;filter:drop-shadow(0 0 20px #c85b7d);animation:pulse 3s infinite}.closing p{font:italic 25px 'Playfair Display',serif;color:#f1cbd5;margin:18px 0 10px}.closing small{color:#a98591;letter-spacing:.16em;font-size:10px}.footer{text-align:center;color:#795663;font-size:10px;letter-spacing:.15em;padding:20px}
+@keyframes appear{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="hearts" aria-hidden="true"></div>
+<main>
+<section class="hero" id="home">
+ <div class="hero-inner">
+  <div class="eyebrow">küçük bir şey, sadece senin için</div>
+  <div class="ornament">♡</div>
+  <h1>Yuşa<em>'ya</em></h1>
+  <p class="subtitle">Hayatın bana yaptığı en güzel şey, seni karşıma çıkarması.</p>
+  <button class="open-btn" id="open">Senin için hazırladım&nbsp; ♡</button>
+  <span class="scroll">sana söylemek istediğim birkaç şey var ↓</span>
+ </div>
+</section>
+<section class="content" id="letter">
+ <div class="divider">♡</div>
+ <div class="letter">
+  <div class="section-label">birkaç kelime</div>
+  <h2>Sevgili Yuşa,</h2>
+  <p>Hayat bazen insanın karşısına hiç beklemediği güzellikler çıkarır. Benim için o güzellik sensin, Yuşa. <span class="highlight">İyi ki hayat seni benim karşıma çıkarmış.</span></p>
+  <p>Ben başka insanların, başka hikâyelerin peşinde değilim. Benim güzel bulduğum şey, seninle paylaştığım bu küçük dünya; konuşmalarımız, gülüşlerimiz ve yalnızca ikimize ait olan anlar.</p>
+  <p>Seninle daha nice anı biriktirmek, sıradan bir günü bile birlikte güzelleştirmek istiyorum. <span class="highlight">Seni sevdiğimi söylemekten hiç yorulmam;</span> çünkü her seferinde, içimdeki en güzel şeyi yeniden dile getirmiş oluyorum. Bu siteyi de yüzünde küçücük bir gülümseme olsun diye, sana olan sevgimle hazırladım.</p>
+ </div>
+ <section class="timer-section" aria-label="Tanışmamızdan beri geçen süre">
+  <div class="timer-heart">♡</div>
+  <div class="section-label">28 Eylül 2026 · bizim başlangıcımız</div>
+  <h2 class="timer-title">Tanışmamızdan bu yana</h2>
+  <p class="timer-subtitle">Seninle başlayan zaman, benim için hep özel.</p>
+  <div class="timer-grid" aria-live="off">
+   <div class="time-unit"><strong class="time-number" id="years">0</strong><span class="time-label">Yıl</span></div>
+   <div class="time-unit"><strong class="time-number" id="months">0</strong><span class="time-label">Ay</span></div>
+   <div class="time-unit"><strong class="time-number" id="days">0</strong><span class="time-label">Gün</span></div>
+   <div class="time-unit"><strong class="time-number" id="hours">0</strong><span class="time-label">Saat</span></div>
+   <div class="time-unit"><strong class="time-number" id="minutes">0</strong><span class="time-label">Dakika</span></div>
+   <div class="time-unit"><strong class="time-number" id="seconds">0</strong><span class="time-label">Saniye</span></div>
+  </div>
+  <p class="timer-total" id="totalDays">Birlikte geçen her saniye kıymetli. ♡</p>
+  <div class="little-world">
+   <div class="world-heading">Biz tanıştığımızdan beri, dünyada…</div>
+   <div class="world-stats">
+    <div class="world-stat"><strong id="birthCount">♡</strong><span>bebek dünyaya geldi. Her biri yepyeni bir hikâyeye başladı.</span></div>
+    <div class="world-stat"><strong id="deathCount">♡</strong><span>insan aramızdan ayrıldı. Zamanın ne kadar kıymetli olduğunu hatırlatan bir gerçek.</span></div>
+    <div class="world-stat"><strong id="growthCount">♡</strong><span>kişilik nüfus artışı yaşandı. Dünya büyümeye devam etti.</span></div>
+    <div class="world-stat"><strong id="heartbeatCount">♡</strong><span>kalp atışı gerçekleşti. Hayat, her yerde kendi ritminde aktı.</span></div>
+    <div class="world-stat"><strong id="breathCount">♡</strong><span>nefes alındı. Milyarlarca küçük hayat anı.</span></div>
+    <div class="world-stat"><strong id="blinkCount">♡</strong><span>kez göz kırpıldı. Kim bilir kaç güzel manzara görüldü.</span></div>
+    <div class="world-stat"><strong id="co2Count">♡</strong><span>ton karbondioksit atmosfere salındı. (Yaklaşık)</span></div>
+    <div class="world-stat"><strong id="energyCount">♡</strong><span>kWh enerji tüketildi. Şehirler, evler ve hayat aydınlandı.</span></div>
+    <div class="world-stat"><strong id="internetCount">♡</strong><span>insan dünya genelinde internet kullanıyor. Bir yerlerde yeni bir hikâye daha paylaşılıyor.</span></div>
+    <div class="world-stat"><strong id="countryCount">♡</strong><span>ülke var. Ama bizim küçük dünyamızın yeri ayrı.</span></div>
+   </div>
+  </div>
+ </section>
+ <div class="poem">
+  <div class="poem-heart">♡</div>
+  <div class="section-label">Yunus Emre'den</div>
+  <h2>Severim Ben Seni</h2>
+  <div class="poem-lines">Severim ben seni candan içerü,
+Yolum vardır bu erkândan içerü.</div>
+  <div style="margin-top:22px;color:#b98b9b;font:italic 13px 'Playfair Display',serif">— Yunus Emre</div>
+ </div>
+ <div class="closing">
+  <div class="big-heart">♥</div>
+  <p>İyi ki hayat seni bana çıkarmış, Yuşa.</p>
+  <small>BU KÜÇÜK DÜNYA İKİMİZE AİT ♡</small>
+ </div>
+ <div class="footer">sevgiyle hazırlanmıştır · ♡</div>
+</section>
+</main>
+<script>
+const heartBox=document.getElementById('hearts');
+// Tanışma tarihi: 28 Eylül 2026, yerel saatle 00:00.
+const meetingDate=new Date(2026,8,28,0,0,0,0);
+const $=id=>document.getElementById(id);
+const pad=n=>String(n).padStart(2,'0');
+function addMonthsClamped(date,months){const d=new Date(date);const day=d.getDate();d.setDate(1);d.setMonth(d.getMonth()+months);const last=new Date(d.getFullYear(),d.getMonth()+1,0).getDate();d.setDate(Math.min(day,last));return d;}
+function updateCounter(){
+ const now=new Date();
+ if(now<meetingDate){$('totalDays').textContent='Başlangıcımıza çok az kaldı. ♡';return;}
+ let years=now.getFullYear()-meetingDate.getFullYear();
+ let anchor=new Date(meetingDate);anchor.setFullYear(meetingDate.getFullYear()+years);
+ if(anchor>now){years--;anchor=new Date(meetingDate);anchor.setFullYear(meetingDate.getFullYear()+years);}
+ let months=(now.getFullYear()-anchor.getFullYear())*12+(now.getMonth()-anchor.getMonth());
+ let monthAnchor=addMonthsClamped(anchor,months);
+ if(monthAnchor>now){months--;monthAnchor=addMonthsClamped(anchor,months);}
+ let remaining=now-monthAnchor;
+ const days=Math.floor(remaining/86400000);remaining-=days*86400000;
+ const hours=Math.floor(remaining/3600000);remaining-=hours*3600000;
+ const minutes=Math.floor(remaining/60000);remaining-=minutes*60000;
+ const seconds=Math.floor(remaining/1000);
+ $('years').textContent=years;$('months').textContent=months;$('days').textContent=days;
+ $('hours').textContent=pad(hours);$('minutes').textContent=pad(minutes);$('seconds').textContent=pad(seconds);
+ const totalDays=Math.floor((now-meetingDate)/86400000);
+ $('totalDays').textContent=`Tam ${totalDays.toLocaleString('tr-TR')} gündür hayatımızda bu güzel başlangıç var. ♡`;
+}
+updateCounter();setInterval(updateCounter,1000);
+// Dünya Bankası ve REST Countries açık verileri; API anahtarı gerekmez.
+async function loadWorldFacts(){
+ const elapsed=()=>Math.max(0,(Date.now()-meetingDate.getTime())/1000);
+ const fmt=n=>Math.floor(Math.max(0,n)).toLocaleString('tr-TR');
+ const ids=['SP.POP.TOTL','SP.DYN.CBRT.IN','SP.DYN.CDRT.IN','IT.NET.USER.ZS','EN.ATM.CO2E.PC','EG.USE.PCAP.KG.OE'];
+ const wbUrl='https://api.worldbank.org/v2/country/WLD/indicator/'+ids.join(';')+'?format=json&per_page=1000';
+ let data={};
+ try{
+  const [wbResponse,countryResponse]=await Promise.allSettled([
+   fetch(wbUrl,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('World Bank');return r.json()}),
+   fetch('https://restcountries.com/v3.1/all?fields=name',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('REST Countries');return r.json()})
+  ]);
+  if(wbResponse.status==='fulfilled'&&Array.isArray(wbResponse.value?.[1])){
+   for(const code of ids){
+    const row=wbResponse.value[1].filter(x=>x.indicator?.id===code&&x.value!==null).sort((a,b)=>Number(b.date)-Number(a.date))[0];
+    if(row)data[code]=Number(row.value);
+   }
+  }
+  const population=data['SP.POP.TOTL']||8300000000;
+  const birthRate=data['SP.DYN.CBRT.IN']||16.5;
+  const deathRate=data['SP.DYN.CDRT.IN']||7.6;
+  const birthsPerSecond=population*birthRate/1000/31556952;
+  const deathsPerSecond=population*deathRate/1000/31556952;
+  const netPerSecond=birthsPerSecond-deathsPerSecond;
+  const heartbeatPerSecond=population*70/60;
+  const breathPerSecond=population*16/60;
+  const blinkPerSecond=population*15/60;
+  const co2PerSecond=(data['EN.ATM.CO2E.PC']||4.7)*population/31556952;
+  const energyPerSecond=(data['EG.USE.PCAP.KG.OE']||1800)*population*11.63/31556952;
+  const internetUsers=population*(data['IT.NET.USER.ZS']||67)/100;
+  const countryCount=countryResponse.status==='fulfilled'&&Array.isArray(countryResponse.value)?countryResponse.value.length:195;
+  function updateFacts(){
+   const t=elapsed();
+   $('birthCount').textContent=fmt(birthsPerSecond*t);
+   $('deathCount').textContent=fmt(deathsPerSecond*t);
+   $('growthCount').textContent=fmt(netPerSecond*t);
+   $('heartbeatCount').textContent=fmt(heartbeatPerSecond*t);
+   $('breathCount').textContent=fmt(breathPerSecond*t);
+   $('blinkCount').textContent=fmt(blinkPerSecond*t);
+   $('co2Count').textContent=fmt(co2PerSecond*t);
+   $('energyCount').textContent=fmt(energyPerSecond*t);
+   $('internetCount').textContent=fmt(internetUsers);
+   $('countryCount').textContent=fmt(countryCount);
+  }
+  updateFacts();setInterval(updateFacts,1000);
+ }catch(error){
+  // API erişilemezse sayfa yine çalışsın; yaklaşık dünya ortalamalarıyla devam et.
+  const population=8300000000,t=elapsed();
+  const rates={birth:population*16.5/1000/31556952,death:population*7.6/1000/31556952,heart:population*70/60,breath:population*16/60,blink:population*15/60,co2:4.7*population/31556952,energy:1800*population*11.63/31556952};
+  function fallback(){const x=elapsed();$('birthCount').textContent=fmt(rates.birth*x);$('deathCount').textContent=fmt(rates.death*x);$('growthCount').textContent=fmt((rates.birth-rates.death)*x);$('heartbeatCount').textContent=fmt(rates.heart*x);$('breathCount').textContent=fmt(rates.breath*x);$('blinkCount').textContent=fmt(rates.blink*x);$('co2Count').textContent=fmt(rates.co2*x);$('energyCount').textContent=fmt(rates.energy*x);$('internetCount').textContent=fmt(population*.67);$('countryCount').textContent='195';}
+  fallback();setInterval(fallback,1000);
+ }
+}
+loadWorldFacts();
+function makeHeart(){const h=document.createElement('span');h.className='heart';h.style.left=Math.random()*100+'%';h.style.fontSize=(10+Math.random()*17)+'px';h.style.animationDuration=(8+Math.random()*8)+'s';heartBox.appendChild(h);setTimeout(()=>h.remove(),17000)}
+setInterval(makeHeart,650);for(let i=0;i<12;i++)setTimeout(makeHeart,i*250);
+document.getElementById('open').addEventListener('click',()=>{const section=document.getElementById('letter');section.style.display='block';requestAnimationFrame(()=>section.classList.add('show'));section.scrollIntoView({behavior:'smooth'});document.getElementById('open').textContent='♡ Senin için ♡'});
+</script>
+</body>
+</html>
